@@ -52,15 +52,18 @@
                             navigation</span><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" data-bs-hover-animate="swing" href="/recetas"
-                                    style="font-size: 20px;font-family: 'Source Sans Pro', sans-serif;">Recetas</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-hover-animate="swing" href="/recetas" style="font-size: 20px;">Recetas</a></li>
 
-                            <li class="nav-item dropdown" data-bs-hover-animate="swing"><a
-                                    class="dropdown-toggle nav-link" aria-expanded="false" data-bs-hover-animate="swing"
-                                    href="/producto" style="font-size: 20px;">Productos</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="/producto">Frescos</a><a
-                                        class="dropdown-item" href="/producto">Second
-                                        Item</a><a class="dropdown-item" href="/producto">Third Item</a></div>
+                            <li class="dropdown transparentbar">
+                                <a class="btn dropdown-toggle" id="dropdownMenu" aria-expanded="false" data-toggle="dropdown" aria-haspopup="true" href="#" style="font-size: 20px;">Productos</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                    <li><a class="dropdown-item" href="/producto">Frescos</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="#">Second Item</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="#">Third Item</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div><a data-bs-hover-animate="bounce" href="/contacto" style="font-size: 20px;">Contacto</a>

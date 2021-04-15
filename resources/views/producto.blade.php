@@ -277,7 +277,6 @@ $cont = 0;
 
     .card-flip {
     display: grid;
-    grid-template: 1fr / 1fr;
     grid-template-areas: "frontAndBack";
     transform-style: preserve-3d;
     transition: all 0.7s ease;
