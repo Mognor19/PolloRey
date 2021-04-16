@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::view('/', 'paginaPrincipal')->name('paginaPrincipal');
 Route::view('/recetas', 'recetas')->name('recetas');
-
-Route::get('/producto', 'carruselController')->name('producto');
+Route::get('/producto', 'productoController@create')->name('producto.create');
+Route::get('/producto/{producto}', 'productoController@show')->name('producto.show');
+Route::get('/producto', 'productoController@store')->name('producto.store');
+Route::get('/producto', 'productoController@index')->name('producto.index');
+Route::get('/embutido', 'embutidoController@index')->name('embutido.index');
 Route::view('/contacto', 'Contacto')-> name('contacto');
 Route::post('Contacto', 'validacionController@store')->name('Contacto');

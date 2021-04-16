@@ -44,43 +44,36 @@
 <body>
     <div class="container">
         <header>
-            <!-- Start: Navigation Clean -->
-            <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-                <div class="container"><a class="navbar-brand" href="/"
-                        style="height: 38px;font-size: 30px;">Inicio</a><button data-toggle="collapse"
-                        class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
-                            navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-hover-animate="swing" href="/recetas" style="font-size: 20px;">Recetas</a></li>
-
-                            <li class="dropdown transparentbar">
-                                <a class="btn dropdown-toggle" id="dropdownMenu" aria-expanded="false" data-toggle="dropdown" aria-haspopup="true" href="#" style="font-size: 20px;">Productos</a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                    <li><a class="dropdown-item" href="/producto">Frescos</a></li>
-                                    <div class="dropdown-divider"></div>
-                                    <li><a class="dropdown-item" href="#">Second Item</a></li>
-                                    <div class="dropdown-divider"></div>
-                                    <li><a class="dropdown-item" href="#">Third Item</a></li>
-                                </ul>
+            <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: #282d32;">
+                <div class="container">
+                    <div><a class="navbar-brand" style="color: #fcfcfc;" href="#"><span><img src="assets/img/Logo2.png">Pollo Rey</span> </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+                    <div class="collapse navbar-collapse" id="navcol-1" style="color: #fcfcfc;">
+                        <ul class="navbar-nav nav-right">
+                            <li class="nav-item"><a class="nav-link" href="/" style="color: #fcfcfc;">Inicio&nbsp;</a></li>
+                            <li class="dropdown transparentbar"><a class="btn dropdown-toggle" aria-expanded="false" data-toggle="dropdown" aria-haspopup="true" href="#" style="color: #fcfcfc;" id="dropdownMenu">Productos&nbsp;</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="/producto">Producto fresco</a><a class="dropdown-item" href="/embutido">Embutido</a></div>
                             </li>
+                            <li class="nav-item"><a class="nav-link" href="/recetas" style="color: #fcfcfc;">Recetas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contacto" style="color: #fcfcfc;">Contacto&nbsp;</a></li>
                         </ul>
-                    </div><a data-bs-hover-animate="bounce" href="/contacto" style="font-size: 20px;">Contacto</a>
-                    <a href="https://www.facebook.com/polloreyca"><i class="fab fa-facebook-square"
-                            style="margin: 8px"></i></a>
-                    <a href="https://www.instagram.com/polloreyca/"><i class="fab fa-instagram-square"
-                            style="margin: 8px"></i></a>
-                    <a href="#"><i class="fas fa-envelope" style="margin: 8px"></i></a>
+                        <p class="navbar-text actions"><a class="btn btn-light action-button" role="button" href="login.html">Iniciar sesión</a></p>
+                    </div>
                 </div>
-            </nav><!-- End: Navigation Clean -->
+            </nav>
         </header><!-- Start: Projects Horizontal -->
         @yield('Contenido')
     </div>
     <div class="footer-dark">
-        <footer>
+        <footer id="footerpad" style="background: #282d32;">
             <div class="container">
-                <text>Desarrollo de Portales Web II &COPY;COMEDERA TECHNOLOGY</text>
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
+                        </ul><p class="copyright text-muted text-center">Desarrollo de Portales Web II &copy;COMEDERA TECHNOLOGY</p>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>

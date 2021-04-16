@@ -19,7 +19,7 @@ $cont = 0;
                         <li data-bs-target="#carousel-1" data-bs-slide-to="6" aria-label="Slide 7"></li>
                     </ol>
                     <div class="carousel-inner">
-                        @foreach ($carrusel as $key => $item)
+                        @foreach ($embutido as $key => $item)
                             <div style="display: none">{{ $cont = $cont + 1 }}</div>
                             @if ($cont != 4)
                                 <div class="carousel-item">
@@ -32,9 +32,8 @@ $cont = 0;
                                 <h3>{{ $item->name }}</h3>
                                 <p>{{ $item->descripcion }}</p>
                             </div>
+                        @endforeach
                     </div>
-
-                    @endforeach
                 </div>
                 <!-- Controls -->
                 <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -52,16 +51,15 @@ $cont = 0;
     </div>
     <div class="container">
         <div class="row">
-            @foreach ($producto as $item)
+            @foreach ($embutido as $item)
                 <div class="col-md-4 card-container">
                     <div class="card-flip">
                         <!-- Card 2 Front -->
                         <div class="card front">
-                            <img src="{{ URL::asset($item->imagen) }}" 
-                                class="card-img-top img-fluid">
+                            <img src="{{ URL::asset($item->imagen) }}" class="card-img-top img-fluid">
                             <div class="card-block">
-                                <h4 class="card-title">{{$item->nombre}}</h4>
-                                <p class="card-text">{{$item->vista_previa}}</p>
+                                <h4 class="card-title">{{ $item->nombre }}</h4>
+                                <p class="card-text">{{ $item->vista_previa }}</p>
                             </div>
                         </div>
                         <!-- End Card 2 Front -->
@@ -72,8 +70,8 @@ $cont = 0;
                                 Acerca del producto
                             </div>
                             <div class="card-block">
-                                <h4 class="card-title">{{$item->nombre}}</h4>
-                                <p class="card-text">{{$item->descripcion}}</p>
+                                <h4 class="card-title">{{ $item->nombre }}</h4>
+                                <p class="card-text">{{ $item->descripcion }}</p>
                                 <a href="#" class="btn btn-primary">Recetas</a>
                             </div>
                         </div>
